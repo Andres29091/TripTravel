@@ -1,29 +1,30 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TripTravel.Entidades;
 
 namespace TripTravel.Data
 {
     public class ApplicationDbContext: DbContext
     {
-        //public ApplicationDbContext(DbContextOptions options): base (options)
-        //{
-
-        //}
-
-        //protected override void  OnModelCreating(ModelBuilder modelBuilder)
-        //{
-
-        //    modelBuilder.Entity<PeliculasGeneros>()
-        //        .HasKey(x => new { x.GeneroId, x.PeliculaId });
-
-        //}
-
-        //public DbSet<Genero> Genero { get; set; }
-
-        //public DbSet<Actor> Actores{ get; set; }
-
-        //public DbSet<Pelicula> Pelicula { get; set; }
-
-        //public DbSet<PeliculasGeneros> PeliculasGeneros { get; set; }
+    public ApplicationDbContext(DbContextOptions options) : base(options)
+    {
 
     }
+
+    //protected override void  OnModelCreating(ModelBuilder modelBuilder)
+    //{
+
+    //    modelBuilder.Entity<PeliculasGeneros>()
+    //        .HasKey(x => new { x.GeneroId, x.PeliculaId });
+
+    //}
+
+    public DbSet<Turista> Turista { get; set; }
+    public DbSet<Hotel> Hotel { get; set; }
+    public DbSet<ContratoSucursal> ContratoSucursal { get; set; }
+    public DbSet<ReservaHotel> ReservaHotel { get; set; }
+    public DbSet<ReservaVuelo> ReservaVuelo { get; set; }
+    public DbSet<Sucursal> Sucursal { get; set; }
+    public DbSet<Vuelo> Vuelo { get; set; }
+
+  }
 }

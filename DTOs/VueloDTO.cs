@@ -1,6 +1,6 @@
-﻿namespace TripTravel.Entidades
+﻿namespace TripTravel.DTOs
 {
-  public class Vuelo
+  public class VueloDTO
   {
     public int Id { get; set; }
     public int Numero { get; set; }

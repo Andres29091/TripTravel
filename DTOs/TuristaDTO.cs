@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TripTravel.Entidades
+namespace TripTravel.DTOs
 {
-  public class Turista
+  public class TuristaDTO
   {
     public int Id { get; set; }
     [Required]

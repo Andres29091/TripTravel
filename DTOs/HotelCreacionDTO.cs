@@ -1,17 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TripTravel.Entidades
+namespace TripTravel.DTOs
 {
-  public class Turista
+  public class HotelCreacionDTO
   {
     public int Id { get; set; }
     [Required]
     public int Codigo { get; set; }
-    [StringLength(60)]
-    public string Nombres { get; set; }
-    public string Apellidos { get; set; }
+    public string Nombre { get; set; }
     public string Direccion { get; set; }
+    public string Ciudad { get; set; }
     public string Telefono { get; set; }
-    public string Foto { get; set; }
+    public string NumeroPlazas { get; set; }
   }
 }
