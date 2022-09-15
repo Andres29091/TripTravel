@@ -9,5 +9,7 @@ namespace TripTravel.Entidades
     public int CodigoTurista { get; set; }
     [Required]
     public int CodigoSucursal { get; set; }
+    public Turista Turista { get; set; }
+    public Sucursal Sucursal { get; set; }
   }
 }

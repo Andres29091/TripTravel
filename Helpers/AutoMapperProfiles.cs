@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using TripTravel.DTOs;
+using TripTravel.Entidades;
 
 namespace TripTravel.Helpers
 {
@@ -7,18 +9,18 @@ namespace TripTravel.Helpers
 
     public AutoMapperProfiles()
     {
-      //CreateMap<Genero,GeneroDTO >().ReverseMap();
-
-
-      //CreateMap<GeneroCreacionDTO, Genero>();
-
-
-
-      //CreateMap<Actor, ActorDTO>().ReverseMap();
-
-
-      //CreateMap<ActorCreacionDTO, Actor>();
-
+      CreateMap<Turista, TuristaDTO>().ReverseMap();
+      CreateMap<TuristaCreacionDTO, Turista>();
+      CreateMap<Vuelo, VueloDTO>().ReverseMap();
+      CreateMap<VueloCreacionDTO, Vuelo>();
+      CreateMap<Sucursal, SucursalDTO>().ReverseMap();
+      CreateMap<SucursalCreacionDTO,Sucursal>();
+      CreateMap<ReservaHotel, ReservaHotelDTO>().ReverseMap();
+      CreateMap<ReservaHotelCreacionDTO, ReservaHotel>();
+      CreateMap<Hotel, HotelDTO>().ReverseMap();
+      CreateMap<HotelCreacionDTO, Hotel>();
+      CreateMap<ContratoSucursal, ContratoSucursalDTO>().ReverseMap();
+      CreateMap<ContratoSucursalCreacionDTO, ContratoSucursal>();
     }
   }
 }
