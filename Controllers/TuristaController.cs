@@ -28,7 +28,7 @@ namespace TripTravel.Controllers
     }
 
     [HttpGet("[action]")]
-    public async Task<ActionResult<List<TuristaDTO>>> GetTurist()
+    public async Task<ActionResult<List<TuristaDTO>>> ObtenerTurista()
     {
       try
       {
@@ -42,7 +42,7 @@ namespace TripTravel.Controllers
     }
 
     [HttpGet("[action]/{id:int}")]
-    public async Task<ActionResult<TuristaDTO>> GetTuristFromId([FromRoute] int id)
+    public async Task<ActionResult<TuristaDTO>> ObtenerTuristaPorId([FromRoute] int id)
     {
       try
       {
@@ -61,7 +61,7 @@ namespace TripTravel.Controllers
     }
 
     [HttpPost("[action]")]
-    public async Task<ActionResult> SetTurist([FromForm] TuristaCreacionDTO turistaCreacionDTO)
+    public async Task<ActionResult> CrearTurista([FromForm] TuristaCreacionDTO turistaCreacionDTO)
     {
       try
       {
@@ -84,13 +84,13 @@ namespace TripTravel.Controllers
     }
 
     [HttpPut("[action]/{id:int}")]
-    public async Task<ActionResult> UpdateTurist(Turista turista, int id)
+    public async Task<ActionResult> ActualizarTurista(Turista turista, int id)
     {
       try
       {
         if (turista.Id != id)
         {
-          return BadRequest("El turista no existe");
+          return BadRequest("El registro no existe");
         }
         var existe = await _context.Turista.AnyAsync(x => x.Id == id);
 
@@ -111,7 +111,7 @@ namespace TripTravel.Controllers
     }
 
     [HttpDelete("[action]/{id:int}")]
-    public async Task<ActionResult> DeleteTurist([FromRoute] int id)
+    public async Task<ActionResult> EliminarTurista([FromRoute] int id)
     {
       try
       {
